@@ -15,7 +15,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score
 st.title('DreamHomes.com')
 st.text('Find you dream homes here')
-df=pd.read_csv('kc_house_data.csv')
+df=pd.read_csv('https://raw.githubusercontent.com/Shreyas3108/house-price-prediction/master/kc_house_data.csv')
 st.image('house.jpg')
 price_set=st.slider("Price Range",min_value=int(df['price'].min()),max_value=int(df['price'].max()),step=50,value=int(df['price'].max()))
 st.text("Price Selected is "+str(price_set))
